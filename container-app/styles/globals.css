@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: #f7f7f7;
+  color: #222;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+header {
+  margin-bottom: 40px;
+}
+
+header h1 {
+  margin-bottom: 8px;
+  color: #b42318;
+  font-size: 2.5rem;
+}
+
+header p {
+  color: #666;
+  font-size: 1.05rem;
+}
+
+.sistema-pedidos {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.area-cardapio,
+.area-pedido {
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+/* CARDÁPIO */
+
+.lista-pratos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.prato {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  background: #fafafa;
+}
+
+.prato h3 {
+  font-size: 1.2rem;
+}
+
+.prato p {
+  color: #b42318;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.prato button {
+  margin-top: auto;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #b42318;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.prato button:hover {
+  background: #8f1c13;
+  transform: translateY(-2px);
+}
+
+/* PEDIDO */
+
+.lista-pedido {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.item-pedido {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 14px;
+  background: #f7f7f7;
+  border-radius: 8px;
+}
+
+.item-pedido strong {
+  color: #b42318;
+  white-space: nowrap;
+}
+
+.total-pedido {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid #eeeeee;
+  font-size: 1.15rem;
+}
+
+.total-pedido strong:last-child {
+  color: #b42318;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+  .sistema-pedidos {
+    grid-template-columns: 1fr;
+  }
+
+  .lista-pratos {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    width: 100%;
+    padding: 30px 15px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .area-cardapio,
+  .area-pedido {
+    padding: 20px;
+  }
+
+  .item-pedido {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
